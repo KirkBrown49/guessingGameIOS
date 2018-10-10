@@ -9,50 +9,141 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--SelectD Ifficulty View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="guessingGameIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SelectDIfficultyViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="YDR-Wi-qsx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Difficulty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6w-CE-FPQ">
+                                <rect key="frame" x="127" y="40" width="121" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yiy-Jd-iaE">
+                                <rect key="frame" x="0.0" y="60.5" width="375" height="606.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gen-g1-ciQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="151.5"/>
+                                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <state key="normal" title="Easy">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="UFu-9b-Mrc" kind="show" identifier="EasyToGuessingGame" id="DEQ-oQ-lm9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGz-uG-rL9">
+                                        <rect key="frame" x="0.0" y="151.5" width="375" height="152"/>
+                                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Medium">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="UFu-9b-Mrc" kind="show" identifier="MediumToGuessingGame" id="mtc-uV-P0C"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6W-W5-4ML">
+                                        <rect key="frame" x="0.0" y="303.5" width="375" height="151.5"/>
+                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="25"/>
+                                        <state key="normal" title="Hard"/>
+                                        <state key="selected">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="UFu-9b-Mrc" kind="show" identifier="HardToGuessingGame" id="0zf-qR-LaH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCl-L9-MYe">
+                                        <rect key="frame" x="0.0" y="455" width="375" height="151.5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Custom">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yiy-Jd-iaE" secondAttribute="bottom" id="0Cn-Oj-eAs"/>
+                            <constraint firstItem="yiy-Jd-iaE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3CO-MK-0n8"/>
+                            <constraint firstItem="s6w-CE-FPQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7TN-Ku-Pxi"/>
+                            <constraint firstItem="s6w-CE-FPQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Dzx-RT-kWm"/>
+                            <constraint firstItem="yiy-Jd-iaE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="F6l-KK-nD9"/>
+                            <constraint firstItem="yiy-Jd-iaE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G7n-gF-eEt"/>
+                            <constraint firstItem="yiy-Jd-iaE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Gi8-XL-nrJ"/>
+                            <constraint firstItem="yiy-Jd-iaE" firstAttribute="top" secondItem="s6w-CE-FPQ" secondAttribute="bottom" id="k6A-Nf-3pO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yiy-Jd-iaE" secondAttribute="trailing" id="txT-NG-a1C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1775.2" y="-603.14842578710648"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="A67-D7-WuJ">
+            <objects>
+                <viewController id="UFu-9b-Mrc" customClass="ViewController" customModule="guessingGameIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SJz-fU-0tc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="SNy-9L-9cu">
                                 <rect key="frame" x="26.5" y="40" width="322" height="267"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guessinng Game" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oH2-qW-8Cf">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guessinng Game" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6r-b8-JdX">
                                         <rect key="frame" x="80" y="0.0" width="162.5" height="26.5"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter a number between 0 and 100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bd-c9-4yS">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter a number between 0 and 100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWf-ik-Qgm">
                                         <rect key="frame" x="0.0" y="43.5" width="322" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="YF6-XU-zaa">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="Qf1-Gx-lgi">
                                         <rect key="frame" x="134.5" y="81" width="53" height="64"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="50"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4P-6o-GvY">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMv-eh-VTJ">
                                         <rect key="frame" x="139.5" y="162" width="43" height="30"/>
                                         <state key="normal" title="Guess"/>
                                         <connections>
-                                            <action selector="guessedButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ked-HQ-EQ9"/>
+                                            <action selector="guessedButtonTapped:" destination="UFu-9b-Mrc" eventType="touchUpInside" id="LiA-nM-SXD"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Too high/low" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ib-ve-puo">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYM-IU-EOK">
+                                        <rect key="frame" x="125.5" y="200.5" width="71" height="0.0"/>
+                                        <state key="normal" title="Play Again"/>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0SL-NQ-gof">
+                                        <rect key="frame" x="126" y="200.5" width="70" height="0.0"/>
+                                        <state key="normal" title="play again"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Too high/low" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gq8-yG-Iyw">
                                         <rect key="frame" x="112.5" y="209" width="97" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 guesses remaining" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vn-Um-7nK">
-                                        <rect key="frame" x="82" y="246.5" width="158.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 5 guesses remaining" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFW-hK-gox">
+                                        <rect key="frame" x="80" y="246.5" width="162.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -62,22 +153,26 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="YDR-Wi-qsx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="RgD-kj-ZaY"/>
-                            <constraint firstItem="YDR-Wi-qsx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wbe-2U-Szi"/>
+                            <constraint firstItem="SNy-9L-9cu" firstAttribute="centerX" secondItem="SJz-fU-0tc" secondAttribute="centerX" id="96g-Tr-59n"/>
+                            <constraint firstItem="SNy-9L-9cu" firstAttribute="top" secondItem="CTE-Ul-VW3" secondAttribute="top" constant="20" id="DHR-Vh-8ff"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="CTE-Ul-VW3"/>
                     </view>
                     <connections>
-                        <outlet property="feedbackLabel" destination="7ib-ve-puo" id="Ywa-Zs-c8i"/>
-                        <outlet property="guessButton" destination="N4P-6o-GvY" id="iOI-Yd-gmO"/>
-                        <outlet property="guessTextField" destination="YF6-XU-zaa" id="Idl-ZB-2RU"/>
-                        <outlet property="instrustionsLabel" destination="7bd-c9-4yS" id="ckr-Lc-hLM"/>
-                        <outlet property="remainingLabel" destination="3vn-Um-7nK" id="DDS-vC-55E"/>
+                        <outlet property="feedbackLabel" destination="gq8-yG-Iyw" id="sPS-8B-517"/>
+                        <outlet property="guessButton" destination="WMv-eh-VTJ" id="24k-6v-SUd"/>
+                        <outlet property="guessTextField" destination="Qf1-Gx-lgi" id="lnx-V3-QAO"/>
+                        <outlet property="guessesRemainingLabel" destination="EFW-hK-gox" id="RgR-SG-ivK"/>
+                        <outlet property="instrustionsLabel" destination="PWf-ik-Qgm" id="ZCc-PY-mUi"/>
+                        <outlet property="playAgainButton" destination="0SL-NQ-gof" id="Acm-Tz-0h7"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BKf-9x-Ozo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1143" y="-266"/>
+            <point key="canvasLocation" x="-1111" y="-569"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="0zf-qR-LaH"/>
+    </inferredMetricsTieBreakers>
 </document>
