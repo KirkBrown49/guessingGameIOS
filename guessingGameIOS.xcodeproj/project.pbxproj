@@ -11,7 +11,6 @@
 		4645166A216CFCDA007E5C72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46451669216CFCDA007E5C72 /* ViewController.swift */; };
 		4645166D216CFCDA007E5C72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4645166B216CFCDA007E5C72 /* Main.storyboard */; };
 		4645166F216CFCDB007E5C72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4645166E216CFCDB007E5C72 /* Assets.xcassets */; };
-		46451672216CFCDB007E5C72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46451670216CFCDB007E5C72 /* LaunchScreen.storyboard */; };
 		4645167A216E87E1007E5C72 /* SelectDifficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46451679216E87E1007E5C72 /* SelectDifficulty.swift */; };
 /* End PBXBuildFile section */
 
@@ -21,7 +20,6 @@
 		46451669216CFCDA007E5C72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4645166C216CFCDA007E5C72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4645166E216CFCDB007E5C72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		46451671216CFCDB007E5C72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46451673216CFCDB007E5C72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46451679216E87E1007E5C72 /* SelectDifficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDifficulty.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,7 +59,6 @@
 				46451679216E87E1007E5C72 /* SelectDifficulty.swift */,
 				4645166B216CFCDA007E5C72 /* Main.storyboard */,
 				4645166E216CFCDB007E5C72 /* Assets.xcassets */,
-				46451670216CFCDB007E5C72 /* LaunchScreen.storyboard */,
 				46451673216CFCDB007E5C72 /* Info.plist */,
 			);
 			path = guessingGameIOS;
@@ -125,7 +122,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46451672216CFCDB007E5C72 /* LaunchScreen.storyboard in Resources */,
 				4645166F216CFCDB007E5C72 /* Assets.xcassets in Resources */,
 				4645166D216CFCDA007E5C72 /* Main.storyboard in Resources */,
 			);
@@ -153,14 +149,6 @@
 				4645166C216CFCDA007E5C72 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		46451670216CFCDB007E5C72 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				46451671216CFCDB007E5C72 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

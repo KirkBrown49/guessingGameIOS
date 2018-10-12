@@ -16,8 +16,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var feedbackLabel: UILabel!
     @IBOutlet weak var guessesRemainingLabel: UILabel!
     @IBOutlet weak var playAgainButton: UIButton!
+    @IBOutlet weak var InstructionsLabel: UILabel!
     
-    // MARK:UI Actions
+        // MARK:UI Actions
     @IBAction func guessedButtonTapped(_ sender: Any) {
         
         let userInput = guessTextField.text!
@@ -33,6 +34,7 @@ class ViewController: UIViewController {
     //MARK: Properties
     var minimumNum = 1
     var maxmimumNum = 100
+    
     var numberOfGuesses = 5
     var randomNumber = 0
     var guessesRemaining = 5
@@ -50,7 +52,7 @@ class ViewController: UIViewController {
         randomNumber = Int.random(in: minimumNum...maxmimumNum)
         
         //guesses remaining
-        guessesRemaining = 5
+        guessesRemaining = numberOfGuesses
         
         //clear text field
         guessTextField.text = ""
@@ -68,6 +70,8 @@ class ViewController: UIViewController {
         feedbackLabel.text = "Guess a number! "
         
         guessesRemainingLabel.text = "You have \(guessesRemaining) guesses left."
+        
+        instrustionsLabel.text = "Please enter a number between 1  and \(maxmimumNum)"
     }
     
     func setupUIForRestart() {
@@ -85,8 +89,8 @@ class ViewController: UIViewController {
     }
     
     func makeAGuess(_ guess : Int) {
-        guard guess >= 1 && guess <= 100 else {
-            feedbackLabel.text = "Your number wasn't between 1 and 100"
+        guard guess >= minimumNum && guess <= maxmimumNum else {
+            feedbackLabel.text = "Your number wasn't between \(minimumNum) and \(maxmimumNum)"
             return
         }
         if guess == randomNumber {
@@ -94,7 +98,7 @@ class ViewController: UIViewController {
             return
         } else {
             guard guessesRemaining > 0 else {
-                feedbackLabel.text = "You lose! Random number is \(Int.random(in: 1...100))."
+                feedbackLabel.text = "You lose! Random number is \(Int.random(in: minimumNum...maxmimumNum))."
                 
                 setupUIForRestart()
                 return
@@ -110,6 +114,7 @@ class ViewController: UIViewController {
         guessesRemaining -= 1
         guessesRemainingLabel.text = "You have \(guessesRemaining) guesses left"
     }
+    
 }
 
 

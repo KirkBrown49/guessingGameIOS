@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--SelectD Ifficulty View Controller-->
+        <!--Select Difficult View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SelectDIfficultyViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SelectDifficultViewController" customModule="guessingGameIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,7 +54,7 @@
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="25"/>
                                         <state key="normal" title="Hard"/>
                                         <state key="selected">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <segue destination="UFu-9b-Mrc" kind="show" identifier="HardToGuessingGame" id="0zf-qR-LaH"/>
@@ -67,6 +67,9 @@
                                         <state key="normal" title="Custom">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="5iQ-9M-NdF" kind="show" id="JSj-WD-pOk"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -90,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1775.2" y="-603.14842578710648"/>
+            <point key="canvasLocation" x="-4442" y="-839"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="A67-D7-WuJ">
@@ -150,29 +153,83 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8B-x6-n0U">
+                                <rect key="frame" x="9" y="30" width="34" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="yMM-XM-ySg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="SNy-9L-9cu" firstAttribute="centerX" secondItem="SJz-fU-0tc" secondAttribute="centerX" id="96g-Tr-59n"/>
                             <constraint firstItem="SNy-9L-9cu" firstAttribute="top" secondItem="CTE-Ul-VW3" secondAttribute="top" constant="20" id="DHR-Vh-8ff"/>
+                            <constraint firstItem="y8B-x6-n0U" firstAttribute="top" secondItem="SJz-fU-0tc" secondAttribute="top" constant="30" id="agD-T4-TFY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CTE-Ul-VW3"/>
                     </view>
                     <connections>
+                        <outlet property="InstructionsLabel" destination="PWf-ik-Qgm" id="nuz-59-Ols"/>
                         <outlet property="feedbackLabel" destination="gq8-yG-Iyw" id="sPS-8B-517"/>
                         <outlet property="guessButton" destination="WMv-eh-VTJ" id="24k-6v-SUd"/>
                         <outlet property="guessTextField" destination="Qf1-Gx-lgi" id="lnx-V3-QAO"/>
                         <outlet property="guessesRemainingLabel" destination="EFW-hK-gox" id="RgR-SG-ivK"/>
-                        <outlet property="instrustionsLabel" destination="PWf-ik-Qgm" id="ZCc-PY-mUi"/>
+                        <outlet property="instrustionsLabel" destination="PWf-ik-Qgm" id="Mqx-qX-0rD"/>
                         <outlet property="playAgainButton" destination="0SL-NQ-gof" id="Acm-Tz-0h7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BKf-9x-Ozo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1111" y="-569"/>
+            <point key="canvasLocation" x="-2471.1999999999998" y="-72.413793103448285"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="h4O-63-9uI">
+            <objects>
+                <viewController id="5iQ-9M-NdF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VBV-su-e4C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please select a number between 1 and 1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TwZ-zi-0xb">
+                                <rect key="frame" x="23" y="280" width="336" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erz-yw-CWE">
+                                <rect key="frame" x="5" y="22" width="38" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="chd-nL-zYv"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7G2-51-CRH">
+                                <rect key="frame" x="70" y="367" width="243" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="UFu-9b-Mrc" kind="show" id="0oC-dT-5NO"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="erz-yw-CWE" firstAttribute="top" secondItem="L5G-eN-71P" secondAttribute="top" constant="2" id="O8k-Rx-D7N"/>
+                            <constraint firstItem="erz-yw-CWE" firstAttribute="leading" secondItem="L5G-eN-71P" secondAttribute="leading" constant="5" id="T9i-uN-VK5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="L5G-eN-71P"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EbP-r7-ceC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1465" y="-839"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0zf-qR-LaH"/>
+        <segue reference="0oC-dT-5NO"/>
+        <segue reference="chd-nL-zYv"/>
     </inferredMetricsTieBreakers>
 </document>
