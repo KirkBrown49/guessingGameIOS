@@ -13,15 +13,12 @@ class  CustomDifficulty: UIViewController {
     @IBOutlet weak var RangeTextField: UITextField!
     
     @IBOutlet weak var NumberOfGuessesTextfield: UITextField!
-    
-    @IBOutlet weak var CustomInstructionsLabel: UILabel!
-    
-    @IBOutlet weak var CustomGuessesLabel: UILabel!
+  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let guessingGameViewController =
             segue.destination as? ViewController else {return}
         guessingGameViewController.maxmimumNum = Int(RangeTextField.text!)!
-        guessingGameViewController.guessesRemaining = Int(NumberOfGuessesTextfield.text!)!
+        guessingGameViewController.numberOfGuesses = Int(NumberOfGuessesTextfield.text!)!
         //Allow the user to select the range from 1 to a 1000
     }
     

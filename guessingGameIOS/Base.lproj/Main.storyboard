@@ -226,15 +226,15 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <segue destination="UFu-9b-Mrc" kind="show" id="vi4-52-OxE"/>
-                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLI-eT-u4k">
                                 <rect key="frame" x="318" y="593" width="36" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="UFu-9b-Mrc" kind="show" id="LKO-Q3-81j"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="hLg-Us-01a">
                                 <rect key="frame" x="171.5" y="211" width="32" height="64"/>
@@ -242,9 +242,6 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <segue destination="UFu-9b-Mrc" kind="show" id="0aP-FW-Dj6"/>
-                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -257,8 +254,6 @@
                         <viewLayoutGuide key="safeArea" id="L5G-eN-71P"/>
                     </view>
                     <connections>
-                        <outlet property="CustomGuessesLabel" destination="mcH-yq-vqf" id="J1o-W7-SxC"/>
-                        <outlet property="CustomInstructionsLabel" destination="TwZ-zi-0xb" id="XVb-ZY-PCI"/>
                         <outlet property="NumberOfGuessesTextfield" destination="NQZ-5P-Q9q" id="mwI-1g-L49"/>
                         <outlet property="RangeTextField" destination="hLg-Us-01a" id="NJT-3n-bIl"/>
                     </connections>
@@ -269,7 +264,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vi4-52-OxE"/>
+        <segue reference="LKO-Q3-81j"/>
         <segue reference="chd-nL-zYv"/>
     </inferredMetricsTieBreakers>
 </document>
