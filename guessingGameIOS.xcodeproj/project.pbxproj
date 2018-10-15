@@ -12,6 +12,7 @@
 		4645166D216CFCDA007E5C72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4645166B216CFCDA007E5C72 /* Main.storyboard */; };
 		4645166F216CFCDB007E5C72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4645166E216CFCDB007E5C72 /* Assets.xcassets */; };
 		4645167A216E87E1007E5C72 /* SelectDifficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46451679216E87E1007E5C72 /* SelectDifficulty.swift */; };
+		464516802170F721007E5C72 /* CustomDifficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4645167F2170F721007E5C72 /* CustomDifficulty.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		4645166E216CFCDB007E5C72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46451673216CFCDB007E5C72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46451679216E87E1007E5C72 /* SelectDifficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDifficulty.swift; sourceTree = "<group>"; };
+		4645167F2170F721007E5C72 /* CustomDifficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomDifficulty.swift; path = ../CustomDifficulty.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				46451669216CFCDA007E5C72 /* ViewController.swift */,
 				46451679216E87E1007E5C72 /* SelectDifficulty.swift */,
 				4645166B216CFCDA007E5C72 /* Main.storyboard */,
+				4645167F2170F721007E5C72 /* CustomDifficulty.swift */,
 				4645166E216CFCDB007E5C72 /* Assets.xcassets */,
 				46451673216CFCDB007E5C72 /* Info.plist */,
 			);
@@ -137,6 +140,7 @@
 				4645167A216E87E1007E5C72 /* SelectDifficulty.swift in Sources */,
 				4645166A216CFCDA007E5C72 /* ViewController.swift in Sources */,
 				46451668216CFCDA007E5C72 /* AppDelegate.swift in Sources */,
+				464516802170F721007E5C72 /* CustomDifficulty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

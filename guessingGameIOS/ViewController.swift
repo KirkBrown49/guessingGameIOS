@@ -18,7 +18,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var playAgainButton: UIButton!
     @IBOutlet weak var InstructionsLabel: UILabel!
     
-        // MARK:UI Actions
+
+    
+    
+    // MARK:UI Actions
     @IBAction func guessedButtonTapped(_ sender: Any) {
         
         let userInput = guessTextField.text!
@@ -115,6 +118,11 @@ class ViewController: UIViewController {
         guessesRemainingLabel.text = "You have \(guessesRemaining) guesses left"
     }
     
+    
+    @IBAction func playAgainButtonTapped(_ sender: Any) {
+        restart()
+    }
+    
+    
+    
 }
-
-
